@@ -33,3 +33,15 @@ class Item:
         """
         self.price = self.price * self.pay_rate
 
+
+    @property
+    def name(self, name):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        if len(name) > 10:
+            name = name[0:10]
+        self.__name = name
+
+
